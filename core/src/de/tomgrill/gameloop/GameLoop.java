@@ -45,13 +45,18 @@ public class GameLoop extends ApplicationAdapter {
 		accumulator += frameTime;
 
 		while (accumulator >= nanosPerLogicTick) {
+
+			// STORE CURRENT STATE
+
 			// UPDATE LOGIC HERE
 
 			accumulator -= nanosPerLogicTick;
 		}
 
 
-		// INTERPOLATE AND RENDER HERE
+		// INTERPOLATE BETWEEN CURRENT AND STORED STATE
+
+		// RENDER HERE
 
 		batch.begin();
 		batch.draw(img, 0, 0);
